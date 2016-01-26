@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/xml"
-	//	"fmt"
 	"github.com/finkf/gocropy"
 	"log"
 	"os"
@@ -18,6 +17,7 @@ func main() {
 		enc := xml.NewEncoder(os.Stdout)
 		enc.Indent(" ", " ")
 		enc.Encode(hocr)
+		os.Stdout.WriteString("\n")
 	} else {
 		log.Fatal(err)
 	}
